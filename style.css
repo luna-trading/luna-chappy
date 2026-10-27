@@ -4,3 +4,10 @@
 .lesson-card{min-height:340px}
 .lesson-card:focus-visible,.btn:focus-visible,.menu a:focus-visible{outline:3px solid #a33369;outline-offset:3px}
 @media(max-width:650px){.lesson-card{min-height:290px}.card-teacher{height:150px}}
+
+/* Different Luna portraits for each lesson */
+.card-teacher{height:166px;object-position:center 24%;background:#ffe6f0}
+.lesson-head img{object-position:center 20%}
+.teacher-tip img{object-position:center 18%}
+.lesson-card{min-height:375px}
+@media(max-width:650px){.lesson-card{min-height:320px}.card-teacher{height:175px}}
