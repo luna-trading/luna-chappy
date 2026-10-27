@@ -14,28 +14,18 @@ html{scroll-padding-top:105px}body{overflow-x:hidden}img{max-width:100%}button,a
 @media(max-width:360px){.hero-photos{height:300px}.hero h1{font-size:30px}nav a{font-size:11px;padding:6px}.lesson-photo{height:280px}.topic-photo img{height:300px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.lesson-card{transition:none}}
 
-/* 2026-10-27: 写真内の文字を切らず、枠の中に完全表示する修正 */
-.hero-photos img,.welcome-img img,.lesson-card>img,.last-face,
-.lesson-photo img,.toc-luna img,.topic-photo img,.end-lesson img {
-  object-fit:contain !important;
-  object-position:center center !important;
-  background:#fff1f7;
-}
-.hero-photos,.lesson-photo,.topic-photo,.welcome-img,.toc-luna,.lesson-card {
-  min-width:0;
-}
-.hero-main,.hero-side img,.lesson-card>img,.lesson-photo img,.topic-photo img {
-  border:1px solid #f5d6e3;
-}
-.lesson-card>img {height:310px !important;}
-.topic-photo img {height:350px !important;}
-.toc-luna img {height:220px !important;}
-.lesson-photo .mini-face {object-fit:contain !important;background:#fff4f9;}
-.hero-photos {overflow:visible;}
-@media(max-width:620px){
- .lesson-card>img {height:min(105vw,440px) !important;}
- .topic-photo img {height:min(110vw,490px) !important;}
- .hero-photos {height:min(105vw,440px);}
- .hero-side img {max-width:100%;}
- .lesson-photo .mini-face {width:37%;}
-}
+/* Readable photo captions: words are HTML outside the cropped photograph. */
+.luna-photo-frame{margin:0;min-width:0;overflow:hidden;display:flex;flex-direction:column;background:#fff;border:1px solid #f5d6e3;border-radius:18px;box-shadow:0 5px 18px #d883a021;height:auto!important;max-width:100%}
+.luna-photo-frame .luna-photo-image{display:block;width:100%!important;height:auto!important;min-height:0;max-height:none;flex:1 1 auto;min-width:0;object-fit:cover!important;object-position:center center!important;border:0!important;border-radius:0!important}
+.luna-photo-caption{flex:0 0 auto;display:block;padding:10px 9px;background:#fff;color:#7b2153;font-weight:800;font-size:clamp(12px,1.25vw,16px);line-height:1.55;text-align:center;overflow-wrap:anywhere;word-break:normal;white-space:normal}
+.hero-photos .luna-photo-frame{height:100%!important}.hero-photos .luna-photo-caption{font-size:clamp(10px,1vw,14px);padding:6px 5px}
+.hero-photos>.hero-main{height:100%!important}.hero-side>.luna-photo-frame{min-height:0;height:100%!important}.hero-side .luna-photo-image{height:0!important;min-height:0;object-fit:cover!important}
+.lesson-card>.luna-photo-frame{border:0;border-radius:0;box-shadow:none}.lesson-card>.luna-photo-frame .luna-photo-image{height:240px!important;flex:none;object-fit:cover!important}
+.lesson-photo>.luna-photo-frame:first-child{width:85%;height:100%!important}.lesson-photo>.luna-photo-frame:first-child .luna-photo-image{height:0!important}
+.lesson-photo>.luna-photo-frame.mini-face{position:absolute;right:0;bottom:-10px;width:37%;height:180px!important;border:7px solid #fff}.lesson-photo>.luna-photo-frame.mini-face .luna-photo-image{height:0!important}
+.topic-photo>.luna-photo-frame .luna-photo-image{height:280px!important;flex:none}
+.toc-luna>.luna-photo-frame .luna-photo-image{height:190px!important;flex:none}
+.welcome-img>.luna-photo-frame .luna-photo-image{height:235px!important;flex:none}
+.last .luna-photo-frame .luna-photo-image{height:255px!important;flex:none}
+.end-lesson .luna-photo-frame .luna-photo-image{height:210px!important;flex:none}
+@media(max-width:620px){.hero-photos .luna-photo-caption{font-size:10px;padding:5px 3px}.lesson-card>.luna-photo-frame .luna-photo-image{height:300px!important}.topic-photo>.luna-photo-frame .luna-photo-image{height:300px!important}.luna-photo-caption{font-size:14px}.hero-photos{height:360px!important}.lesson-photo>.luna-photo-frame.mini-face{height:160px!important}}
