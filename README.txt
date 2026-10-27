@@ -1,15 +1,12 @@
-ルナのChatGPT完全マスター講座（全8回）
-GitHub Pages 用：フォルダーなし・全ファイル直下配置版
+ルナのChatGPT完全マスター講座｜一般公開サイト版
 
-index.html
-style.css
-app.js
-luna-teacher.webp
-README.txt
+講師：実写ルナ先生／対象：このホームページを訪れたすべての方
+全8回の読み物教材。テスト、ログイン、学習進捗機能なし。
 
-上記5ファイルを GitHub リポジトリ luna-trading/luna-chappy の一番上にアップロードしてください。
-既存の同名ファイルは置き換えてください。
-GitHub の Settings > Pages で Deploy from a branch / main / (root) を選んで Save。
-公開URL: https://luna-trading.github.io/luna-chappy/
+GitHub Pagesの luna-trading/luna-chappy にアップロードする際は、ZIPを展開して中の5ファイルをリポジトリ直下へ置いてください。フォルダーをアップロードしないでください。
 
-テスト・進捗管理・ログインなし。非公式学習サイト。
+index.html / style.css / app.js / luna-teacher.webp / README.txt
+
+公開サイトでは画像も一般公開されます。画像使用の権利と公開範囲を確認してください。
+
+講座内の画面名や利用可能機能はChatGPTの更新・プランによって異なる場合があります。
