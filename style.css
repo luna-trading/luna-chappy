@@ -13,3 +13,29 @@ html{scroll-padding-top:105px}body{overflow-x:hidden}img{max-width:100%}button,a
 }
 @media(max-width:360px){.hero-photos{height:300px}.hero h1{font-size:30px}nav a{font-size:11px;padding:6px}.lesson-photo{height:280px}.topic-photo img{height:300px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.lesson-card{transition:none}}
+
+/* 2026-10-27: 写真内の文字を切らず、枠の中に完全表示する修正 */
+.hero-photos img,.welcome-img img,.lesson-card>img,.last-face,
+.lesson-photo img,.toc-luna img,.topic-photo img,.end-lesson img {
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:#fff1f7;
+}
+.hero-photos,.lesson-photo,.topic-photo,.welcome-img,.toc-luna,.lesson-card {
+  min-width:0;
+}
+.hero-main,.hero-side img,.lesson-card>img,.lesson-photo img,.topic-photo img {
+  border:1px solid #f5d6e3;
+}
+.lesson-card>img {height:310px !important;}
+.topic-photo img {height:350px !important;}
+.toc-luna img {height:220px !important;}
+.lesson-photo .mini-face {object-fit:contain !important;background:#fff4f9;}
+.hero-photos {overflow:visible;}
+@media(max-width:620px){
+ .lesson-card>img {height:min(105vw,440px) !important;}
+ .topic-photo img {height:min(110vw,490px) !important;}
+ .hero-photos {height:min(105vw,440px);}
+ .hero-side img {max-width:100%;}
+ .lesson-photo .mini-face {width:37%;}
+}
