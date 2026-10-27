@@ -26,3 +26,14 @@ html{scroll-padding-top:105px}body{overflow-x:hidden}img{max-width:100%}button,a
 .lesson-photo>.luna-photo-frame.mini-face{width:35%;height:auto!important;bottom:0;right:0;border:5px solid white}
 .lesson-card>.luna-photo-frame .luna-photo-image,.topic-photo .luna-photo-image,.toc-luna .luna-photo-image,.welcome-img .luna-photo-image,.last .luna-photo-image,.end-lesson .luna-photo-image{height:auto!important}
 @media(max-width:620px){.hero-photos{height:auto!important}.hero-side{gap:6px}.hero-side .luna-photo-frame{border-radius:9px}.lesson-photo{min-height:0!important}.topic-photo{width:100%}.cards{grid-template-columns:1fr}}
+
+/* 2026-10-27: Full-bleed photo cards with text embedded inside photo */
+.luna-photo-frame{display:block!important;overflow:hidden!important;width:100%!important;border-radius:20px!important;background:#fff0f7!important;box-shadow:0 10px 24px #d26c9a33!important}
+.luna-photo-frame .luna-photo-image{display:block!important;width:100%!important;height:100%!important;aspect-ratio:18/23!important;object-fit:cover!important;object-position:center!important;border-radius:0!important}
+.lesson-card>.luna-photo-frame{border-radius:20px 20px 0 0!important}
+.hero-photos{align-items:stretch!important;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)!important}
+.hero-side{align-content:start!important}
+.lesson-photo>.luna-photo-frame:first-child{width:76%!important}
+.lesson-photo>.luna-photo-frame.mini-face{width:35%!important}
+.topic-photo .luna-photo-frame{max-width:100%!important}
+@media(max-width:620px){.hero-photos{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)!important}.lesson-card>.luna-photo-frame{width:100%!important}.topic-photo .luna-photo-frame{width:100%!important}}
